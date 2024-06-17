@@ -48,7 +48,9 @@ jobs:
 
       - name: Zip the Build
         if: steps.check_version.outputs.changed == 'true'
-        run: zip -r pulse-song-tracker-v${{steps.check_version.outputs.version}}.zip ./dist/**/*.js package.json package-lock.json
+        run: |
+          shopt -s globstar
+          zip -r pulse-song-tracker-v${{steps.check_version.outputs.version}}.zip ./dist/**/*.js package.json package-lock.json
 
       - name: Create Release
         if: steps.check_version.outputs.changed == 'true'
