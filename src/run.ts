@@ -7,7 +7,7 @@ const { file, endpoints } = await getConfig()
 
 let lastSong: string = ''
 
-watch(file, { persistent: true }, async event => {
+watch(file, { persistent: true }, async () => {
 	const content = await readFile(file, { encoding: 'utf-8' })
 
 	if (content === lastSong || content.length < 1) return
@@ -29,7 +29,6 @@ async function callEndpoint(endpoint: any, content: string) {
 		.then(() => true)
 		.catch(result => {
 			if (result instanceof HTTPError) {
-				//@ts-ignore
 				result.response.json().then(json => {
 					console.error(`Request to ${endpoint.url} failed:`, json)
 				})
