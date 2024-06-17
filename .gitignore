@@ -1,0 +1,8 @@
+.DS_Store
+.idea
+node_modules
+dist
+config.json
+song.txt
+live-song.zip
+deploy.sh

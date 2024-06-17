@@ -1,0 +1,28 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"display": "Node 18",
+
+	"compilerOptions": {
+		"lib": ["es2022"],
+		"module": "node16",
+		"target": "es2022",
+		"moduleResolution": "node16",
+		"allowSyntheticDefaultImports": true,
+		"sourceMap": false,
+		"declaration": true,
+		"declarationMap": false,
+		"strict": true,
+		"strictPropertyInitialization": false,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"removeComments": true,
+		"skipLibCheck": true,
+		"outDir": "dist",
+		"baseUrl": "./src",
+		"preserveSymlinks": true
+	},
+	"typeRoots": ["./node_modules/@types", "./src/global.d.ts"],
+	"filesGlob": ["./node_modules/@types/*.d.ts"],
+	"include": ["src/**/*.ts", "src/global.d.ts"],
+	"exclude": ["node_modules"]
+}
