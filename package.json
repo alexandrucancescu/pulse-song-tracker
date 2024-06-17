@@ -1,6 +1,6 @@
 {
 	"name": "pulse-song-tracker",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Node app meant to be installed as a windows service in order to listen for file changes and report them to an API, used for tracking current songs in radio broadcast software.",
 	"exports": "./dist/run.js",
 	"type": "module",
